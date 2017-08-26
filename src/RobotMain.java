@@ -6,10 +6,9 @@ import lejos.robotics.subsumption.Behavior;
 public class RobotMain {
 
 	public static void main(String[] args) {
-		Button.waitForAnyPress();
-		RobotUtils utils = new RobotUtils();
 
-		utils.showMessage();
+		RobotUtils utils = new RobotUtils();
+		
 		Behavior b1 = new DrivetestBehaviour();
 		// Behavior b2 = new BatteryLow(6.5f);
 		// Behavior b3 = new HitWall(SensorPort.S2);

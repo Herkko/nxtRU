@@ -10,15 +10,31 @@ public class RobotUtils {
 		
 	}
 
-	public void showMessage() {
-		LCD.drawInt(7337, 0, 0);
-		Button.waitForAnyPress();
+	
+	
+	
+	public void liikuEteen() {
+		Motor.A.forward();
+		Motor.B.forward();
+	}
+	
+	public void liikuTaakse() {
+		Motor.A.backward();
+		Motor.B.backward();
 		
 	}
+	
+	public void kaannyVasemmalle(int astemaara) {
+		Motor.A.forward();
+		
+	}
+	
+	public void kaannyOikealle(int astemaara ) {
+		Motor.B.forward();
+	}
+	
 	public void kauhaKiinni() {
 		Motor.C.rotate(90);
-		
-		
 		
 	}
 	public void kauhaAuki() {
