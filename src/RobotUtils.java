@@ -18,11 +18,7 @@ public class RobotUtils {
 
 		
 	}
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> 685a53ee8c2d7ef9a77dc12b214b2d04d9a81838
 	public void moveForward() {
 		Motor.A.forward();
 		Motor.B.forward();
