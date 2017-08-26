@@ -1,6 +1,6 @@
 #.gitignore
 *.class
-/bin
+#/bin
 /bin/*.class
-*.nxj
-*.nxd
+#*.nxj
+#*.nxd
