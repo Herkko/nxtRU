@@ -11,12 +11,11 @@ public class RobotMain {
 
 		utils.showMessage();
 		Behavior b1 = new DrivetestBehaviour();
-		 Behavior b2 = new RobotBehavior_Kauhatesti();
-		// Behavior b3 = new HitWall(SensorPort.S2);
-		Behavior[] bArray = { b2, b1 };
+		Behavior b2 = new RobotBehavior_Kauhatesti();
+		Behavior b3 = new RobotBehavior_HittedWall();
+		Behavior[] bArray = { b2, b3 };
 		Arbitrator arby = new Arbitrator(bArray);
 		arby.start();
-
 
 	}
 

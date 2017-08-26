@@ -15,7 +15,7 @@ public class DrivetestBehaviour implements Behavior {
 	private boolean suppressed = false;
 
 	public boolean takeControl() {
-		return true;
+		return false;
 	}
 
 	public void suppress() {
