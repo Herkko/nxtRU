@@ -20,7 +20,7 @@ public class RobotBehavior_HittedWall implements Behavior {
 	
 	public void action() {
 		suppressed = false;
-		
+		utility.moveBack(10, 10);
 		utility.turnLef(90);
 		
 	}

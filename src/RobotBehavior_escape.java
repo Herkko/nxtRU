@@ -2,12 +2,11 @@
 import lejos.robotics.subsumption.Behavior;
 
 public class RobotBehavior_escape implements Behavior {
-	private boolean suppressed;
-	private RobotUtils utility;
+	private boolean suppressed = false;
+	private RobotUtils utility = new RobotUtils();;
 
 	public RobotBehavior_escape() {
-		suppressed = false;
-		utility = new RobotUtils();
+	
 	}
 
 	public boolean takeControl() {
