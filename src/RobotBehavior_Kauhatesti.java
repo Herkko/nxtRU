@@ -20,7 +20,7 @@ public class RobotBehavior_Kauhatesti implements Behavior {
 	public void action() {
 
 		utility.openClaw();
-		utility.closeClaW();
+		utility.closeClaw();
 
 	}
 }

@@ -9,11 +9,11 @@ public class RobotMain {
 
 		//RobotUtils utils = new RobotUtils();
 		
-		Behavior b1 = new DrivetestBehaviour();
+		//Behavior b1 = new DrivetestBehaviour();
 		Behavior b2 = new RobotBehavior_Kauhatesti();
 		Behavior b3 = new RobotBehavior_HittedWall();
 		Behavior b4 = new RobotBehavior_escape();
-		Behavior[] bArray = { b1, b2, b3, b4 };
+		Behavior[] bArray = {b2, b3, b4 };
 		Arbitrator arby = new Arbitrator(bArray);
 		arby.start();
 

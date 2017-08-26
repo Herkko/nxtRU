@@ -7,16 +7,12 @@ import lejos.nxt.LightSensor;
 import lejos.nxt.UltrasonicSensor;
 
 public class RobotUtils {
-	TouchSensor touch;
-	LightSensor light;
-	UltrasonicSensor sonic;
+	TouchSensor touch = new TouchSensor(SensorPort.S1);	
+	LightSensor light = new LightSensor(SensorPort.S2);
+	UltrasonicSensor sonic = new UltrasonicSensor(SensorPort.S3);
 	
 	public RobotUtils(){
-		TouchSensor touch = new TouchSensor(SensorPort.S1);	
-		LightSensor light = new LightSensor(SensorPort.S2);
-		UltrasonicSensor sonic = new UltrasonicSensor(SensorPort.S3);
-
-		
+			
 	}
 
 	public void moveForward() {
@@ -40,15 +36,15 @@ public class RobotUtils {
 	}
 	
 	public void closeClaw() {
-		Motor.C.rotate(90);
+		Motor.C.rotate(140);
 		
 	}
 	public void openClaw() {
-		Motor.C.rotate(90);
+		Motor.C.rotate(-140);
 	}
 	
 	public boolean touchSensorPressed() {
-	return touch.isPressed();
+		return touch.isPressed();
 	}
 	 public boolean escapeDown() {
 		 return Button.ESCAPE.isDown();
