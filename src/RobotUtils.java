@@ -20,19 +20,24 @@ public class RobotUtils {
 		Motor.B.forward();
 	}
 	
-	public void moveBack(int distanceA, int distanceB) {
+	
+	public void moveBack() {
 		Motor.A.backward();
 		Motor.B.backward();
 		
 	}
+	public void stopMotors() {
+		Motor.A.stop();
+		Motor.B.stop();
+	}
 	
 	public void turnLef(int degree) {
-		Motor.A.forward();
+		Motor.A.rotate(degree);
 		
 	}
 	
 	public void turnRight(int degree ) {
-		Motor.B.forward();
+		Motor.B.rotate(degree);
 	}
 	
 	public void closeClaw() {
