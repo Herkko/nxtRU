@@ -10,6 +10,7 @@ public class RobotUtils {
 
 	public void showMessage() {
 		LCD.drawInt(7337, 0, 0);
+		Button.waitForAnyPress();
 		
 	}
 	

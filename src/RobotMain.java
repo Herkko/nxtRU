@@ -1,4 +1,5 @@
 import lejos.nxt.Button;
+import lejos.nxt.LCD;
 
 public class RobotMain {
 
@@ -7,6 +8,7 @@ public class RobotMain {
 		RobotUtils utils = new RobotUtils();
 		
 		utils.showMessage();
+		
 		
 		
 		//Tänne vois luoda kokeilumielessä olion tosta Robot Utils
