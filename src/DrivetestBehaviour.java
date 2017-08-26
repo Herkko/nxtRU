@@ -2,20 +2,17 @@ import lejos.robotics.subsumption.Behavior;
 import lejos.nxt.Motor;
 
 public class DrivetestBehaviour implements Behavior {
-
-	// private TouchSensor touch;
-	// private UltrasonicSensor sonar;
-	RobotUtils utils = new RobotUtils();
 	
-	public DrivetestBehaviour()
-    {
-       
-    }
+	RobotUtils utility;
+	private boolean suppressed;
 
-	private boolean suppressed = false;
+	public DrivetestBehaviour() {
+		suppressed = false;
+		utility = new RobotUtils();
+	}
 
 	public boolean takeControl() {
-		return false;
+		return true;
 	}
 
 	public void suppress() {
@@ -24,9 +21,7 @@ public class DrivetestBehaviour implements Behavior {
 
 	public void action() {
 		suppressed = false;
-		Motor.A.rotate(-180, true);
-		Motor.B.rotate(-360, true);
-
+		utility.moveForward();
 		while (Motor.B.isMoving() && !suppressed)
 			Thread.yield();
 
