@@ -1,3 +1,5 @@
 /RobotMain.class
 /RobotUtils.class
 /DrivetestBehaviour.class
+/RobotBehavior_HittedWall.class
+/RobotBehavior_Kauhatesti.class
