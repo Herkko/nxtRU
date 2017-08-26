@@ -22,7 +22,7 @@ public class RobotUtils {
 		
 	}
 	public void kauhaAuki() {
-		Motor.C.rotate();
+		Motor.C.rotate(90);
 	}
 	
 	

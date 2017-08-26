@@ -25,13 +25,13 @@ public class DrivetestBehaviour implements Behavior {
 	public void action() {
 		suppressed = false;
 		Motor.A.rotate(-180, true);
-		Motor.C.rotate(-360, true);
+		Motor.B.rotate(-360, true);
 
-		while (Motor.C.isMoving() && !suppressed)
+		while (Motor.B.isMoving() && !suppressed)
 			Thread.yield();
 
 		Motor.A.stop();
-		Motor.C.stop();
+		Motor.B.stop();
 	}
 
 }
