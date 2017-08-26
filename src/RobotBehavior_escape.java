@@ -1,16 +1,17 @@
+
 import lejos.robotics.subsumption.Behavior;
 
-public class RobotBehavior_Kauhatesti implements Behavior {
+public class RobotBehavior_escape implements Behavior {
 	private boolean suppressed;
 	private RobotUtils utility;
 
-	public RobotBehavior_Kauhatesti() {
+	public RobotBehavior_escape() {
 		suppressed = false;
 		utility = new RobotUtils();
 	}
 
 	public boolean takeControl() {
-		return true;
+		return utility.escapeDown();
 	}
 
 	public void suppress() {
@@ -18,9 +19,7 @@ public class RobotBehavior_Kauhatesti implements Behavior {
 	}
 
 	public void action() {
-
-		utility.openClaw();
-		utility.closeClaW();
-
+		System.exit(0);
 	}
+
 }
