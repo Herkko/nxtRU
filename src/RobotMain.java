@@ -1,20 +1,23 @@
 import lejos.nxt.Button;
 import lejos.nxt.LCD;
+import lejos.robotics.subsumption.Arbitrator;
+import lejos.robotics.subsumption.Behavior;
 
 public class RobotMain {
 
 	public static void main(String[] args) {
 		Button.waitForAnyPress();
 		RobotUtils utils = new RobotUtils();
-		
+
 		utils.showMessage();
-		
-		
-		
-		//Tänne vois luoda kokeilumielessä olion tosta Robot Utils
-		//luokasta ja kattoa että miten sen saa toimimaan täältä käsin
-		//Molemmat luokat pitää kuitenkin kääntää ja linkata ja uploadata.
-		
+		Behavior b1 = new DrivetestBehaviour();
+		// Behavior b2 = new BatteryLow(6.5f);
+		// Behavior b3 = new HitWall(SensorPort.S2);
+		Behavior[] bArray = { b1 };
+		Arbitrator arby = new Arbitrator(bArray);
+		arby.start();
+
+
 	}
 
 }
