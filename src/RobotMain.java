@@ -13,7 +13,8 @@ public class RobotMain {
 		//Behavior b2 = new RobotBehavior_Kauhatesti();
 		Behavior b3 = new RobotBehavior_HittedWall();
 		Behavior b4 = new RobotBehavior_escape();
-		Behavior[] bArray = {b1, b3, b4 };
+		Behavior a1 = new RobotBehavior_MonolithFindButton();
+		Behavior[] bArray = {a1, b3, b4 };
 		Arbitrator arby = new Arbitrator(bArray);
 		arby.start();
 

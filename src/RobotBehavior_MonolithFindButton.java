@@ -6,7 +6,7 @@ public class RobotBehavior_MonolithFindButton implements Behavior {
 	private boolean suppressed = false;
 	private RobotUtils utility = new RobotUtils();
 	private boolean done = false;
-	DifferentialPilot pilot = new DifferentialPilot(2.25f, 5.5f, Motor.A, Motor.B);
+	DifferentialPilot pilot = new DifferentialPilot(5.0, 14.0, Motor.A, Motor.B);
 
 	public RobotBehavior_MonolithFindButton() {
 		

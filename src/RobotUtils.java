@@ -20,12 +20,21 @@ public class RobotUtils {
 		Motor.B.forward();
 	}
 	
+	public void moveForwardCentimeters(int centimeters) {
+		Motor.A.rotate(centimeters);
+		Motor.B.rotate(centimeters);
+	}
 	
 	public void moveBack() {
 		Motor.A.backward();
-		Motor.B.backward();
-		
+		Motor.B.backward();	
 	}
+	
+	public void moveBackCentimeters(int centimeters) {
+		Motor.A.rotate(centimeters);
+		Motor.B.rotate(centimeters);
+	}
+	
 	public void stopMotors() {
 		Motor.A.stop();
 		Motor.B.stop();
