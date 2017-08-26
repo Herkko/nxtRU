@@ -6,7 +6,7 @@ public class RobotBehavior_MonolithFindButton implements Behavior {
 	private boolean suppressed = false;
 	private RobotUtils utility = new RobotUtils();
 	private boolean done = false;
-	DifferentialPilot pilot = new DifferentialPilot(5.0, 14.0, Motor.A, Motor.B);
+	DifferentialPilot pilot = new DifferentialPilot(5.5, 14.5, Motor.A, Motor.B);
 
 	public RobotBehavior_MonolithFindButton() {
 		
@@ -22,11 +22,12 @@ public class RobotBehavior_MonolithFindButton implements Behavior {
 
 	public void action() {
 		suppressed = false;
-		pilot.travel(45);
+		pilot.travel(90);
 		pilot.rotate(90);
-		pilot.travel(45);
+		pilot.travel(30);
+		pilot.steer(20, 90, false);
 		
-		//valkoinen alue
+		//Aja kunnes  alue
 		
 		//ajele ympäriinsä
 		
