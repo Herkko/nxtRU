@@ -1,4 +1,5 @@
 import lejos.robotics.subsumption.Behavior;
+import lejos.nxt.TouchSensor;
 
 
 public class RobotBehavior_HittedWall implements Behavior {
@@ -6,10 +7,11 @@ public class RobotBehavior_HittedWall implements Behavior {
 	
 	public RobotBehavior_HittedWall() {
 		suppressed = false;
+		
 	}
 	
 	public boolean takeControl() {
-		return false;
+		return utils.touchPressed();
 	}
 	
 	public void suppress() {
