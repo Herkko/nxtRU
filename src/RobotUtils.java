@@ -63,6 +63,13 @@ public class RobotUtils {
 	 public boolean escapeDown() {
 		 return Button.ESCAPE.isDown();
 	 }
+	 
+	 public boolean obstacleAHead() {
+		 if(sonic.getDistance() < 25) {
+			 return true;
+		 }
+		 return false;
+	 }
 	
 	
 }
